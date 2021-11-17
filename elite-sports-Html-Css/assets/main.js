@@ -1,0 +1,1 @@
+document.getElementById('date').innerText = `[${dayjs().format('ddd MMM DD YYYY')}]`

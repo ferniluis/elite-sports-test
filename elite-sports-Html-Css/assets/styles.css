@@ -1,0 +1,33 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: url(./lion-king-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+}
+
+.container {
+    padding: 80px;
+}
+
+.title {
+    font-size: 8rem;
+    font-weight: 600;
+    margin: 40px 0;
+    letter-spacing: -8px;
+    color: white;
+}
+
+.date-wrapper {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.description {
+    padding: 25px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    opacity: 0.75;
+}
