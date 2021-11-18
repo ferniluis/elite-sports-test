@@ -1,21 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { SafeAreaView, StyleSheet, Platform } from 'react-native';
+import Grid from './screens/Grid/Grid';
+import { ContextProvider } from './store/Context';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={[styles.container, styles.droidSafeArea]}>
+      <ContextProvider>
+        <Grid />
+      </ContextProvider>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'rgb(36, 40, 47)',
   },
+  droidSafeArea: {
+    paddingTop: Platform.OS === 'android' ? 30 : 0
+  }
 });

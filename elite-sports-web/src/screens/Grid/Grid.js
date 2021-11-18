@@ -18,9 +18,7 @@ function Grid() {
 
     }, []);
 
-    const onThemeChange = (event) => {
-        setDarkMode(event.target.checked);
-    }
+    const onThemeChange = () => setDarkMode(previousState => !previousState);
 
     return <div className={ darkMode ? 'body' : ''}>
         <nav className={'nav-bar'}>
